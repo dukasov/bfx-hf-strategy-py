@@ -113,7 +113,7 @@ async def _seed_candles(strategy, bfxapi, tf):
 
 class Executor:
 
-  def __init__(self, strategy, timeframe='1hr', show_chart=True):
+  def __init__(self, strategy, timeframe='1h', show_chart=True):
     self.strategy = strategy
     self.stored_prices = {}
     self.timeframe = timeframe
