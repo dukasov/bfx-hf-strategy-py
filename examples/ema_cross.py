@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import sys
 import asyncio
 sys.path.append('../')
@@ -44,7 +46,7 @@ async def update_long(update, position):
     await strategy.close_position_market(mtsCreate=update.mts)
 
 from hfstrategy import Executor
-exe = Executor(strategy,  timeframe='30m')
+exe = Executor(strategy, timeframe='30m')
 
 # Backtest offline
 exe.offline(file='btc_candle_data.json')
